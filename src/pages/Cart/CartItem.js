@@ -6,7 +6,7 @@ const CartItem = (props) => {
     const {cartItems,addToCart,removeFromCart} = useContext(ShopContext)
   return (
     <div className='cartItem'>
-        <img src={productImage}/>
+        <img src={productImage} />
         <div className="description">
             <p>
                 <b>{productName}</b>
@@ -14,7 +14,7 @@ const CartItem = (props) => {
             <p>${price}</p>
             <div className="countHandler">
                 <button onClick={()=>removeFromCart(id)}>-</button>
-                <input value={cartItems[id]} onChange={(e)=>(e.target.value)}/>
+                <input value={cartItems[id]}/>
                 <button onClick={()=>addToCart(id)}>+</button>
             </div>
         </div>
